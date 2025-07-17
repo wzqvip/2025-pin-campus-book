@@ -30,7 +30,7 @@ const config: GatsbyConfig = {
         background_color: `#ffffff`,
         theme_color: `#333333`,
         display: `minimal-ui`,
-        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/inter-icon.png`, 
       },
     },
   ],
