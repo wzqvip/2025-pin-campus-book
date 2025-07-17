@@ -85,7 +85,7 @@ const IndexPage: FC<PageProps> = () => {
       case '王子琪':
         return <StaticImage src="../images/wzq.png" alt="王子琪" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '刘禹彤':
-        return <StaticImage src="../images/lyt.png" alt="刘禹彤" width={65} height={65} layout="fixed" placeholder="none"/>;
+        return <StaticImage src="../images/lyt.jpg" alt="刘禹彤" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '吴瑜青':
         return <StaticImage src="../images/wyq.jpg" alt="吴瑜青" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '刘翼飞':
@@ -93,11 +93,11 @@ const IndexPage: FC<PageProps> = () => {
       case '戴梦瑶':
         return <StaticImage src="../images/dmy.png" alt="戴梦瑶" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '张天祺':
-        return <StaticImage src="../images/ztq.png" alt="张天祺" width={65} height={65} layout="fixed" placeholder="none"/>;
+        return <StaticImage src="../images/ztq.jpg" alt="张天祺" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '张雅捷':
-        return <StaticImage src="../images/zyj2.png" alt="张雅捷" width={65} height={65} layout="fixed" placeholder="none"/>;
+        return <StaticImage src="../images/zyj2.jpg" alt="张雅捷" width={65} height={65} layout="fixed" placeholder="none"/>;
       case '林弘扬':
-        return <StaticImage src="../images/lhy.png" alt="林弘扬" width={65} height={65} layout="fixed" placeholder="none"/>;
+        return <StaticImage src="../images/lhy.jpg" alt="林弘扬" width={65} height={65} layout="fixed" placeholder="none"/>;
       default:
         return <></>;
     }

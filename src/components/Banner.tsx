@@ -1,14 +1,6 @@
 // 导入 React 库和必要的 hooks
 import React, { FC, useState, useEffect } from 'react';
-import { withPrefix } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image"
-
-// import Image1 from '../images/banner-image1.jpg';
-// import Image2 from '../images/banner-image2.jpg';
-// import Image3 from '../images/banner-image3.jpg';
-// import Image4 from '../images/banner-image4.jpg';
-// import Image5 from '../images/banner-image5.jpg';
-
 // 定义轮播图片数据接口
 interface CarouselImage {
   id: number;
