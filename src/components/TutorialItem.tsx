@@ -26,7 +26,7 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
       case '注意事项':
         return (
           <StaticImage
-            src="../images/tutorial-precaution.png"
+            src="../images/tutorial-precaution.jpg"
             alt="注意事项"
             width={300}
             height={150}
