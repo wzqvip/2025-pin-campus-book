@@ -45,25 +45,63 @@ const IndexPage: FC<PageProps> = () => {
   ];
 
   const members1: Member1[] = [
-    { name: '笛韵扬', imageSrc: '../images/dyy.png' }, // 在这里填入图片路径
-    { name: '周子涵', imageSrc: '' }, // 在这里填入图片路径
-    { name: '齐一舟', imageSrc: '' }, // 在这里填入图片路径
-    { name: '钟奕珈', imageSrc: '' }, // 在这里填入图片路径
-    { name: '钟阅旸', imageSrc: '' }, // 在这里填入图片路径
-    { name: '陈怡冰', imageSrc: '' }, // 在这里填入图片路径
-    { name: '汤恭恪', imageSrc: '' }  // 在这里填入图片路径
+    { name: '笛韵扬' },
+    { name: '周子涵' },
+    { name: '齐一舟' },
+    { name: '钟奕珈' },
+    { name: '钟阅旸' },
+    { name: '陈怡冰' },
+    { name: '汤恭恪' }
   ];
 
   const members2: Member2[] = [
-    { name: '王子琪', imageSrc: '' }, // 在这里填入图片路径
-    { name: '刘禹彤', imageSrc: '' }, // 在这里填入图片路径
-    { name: '吴瑜青', imageSrc: '' }, // 在这里填入图片路径
-    { name: '刘翼飞', imageSrc: '' }, // 在这里填入图片路径
-    { name: '戴梦瑶', imageSrc: '' }, // 在这里填入图片路径
-    { name: '张天祺', imageSrc: '' }, // 在这里填入图片路径
-    { name: '张雅捷', imageSrc: '' }, // 在这里填入图片路径
-    { name: '林弘扬', imageSrc: '' }  // 在这里填入图片路径
+    { name: '王子琪' },
+    { name: '刘禹彤' },
+    { name: '吴瑜青' },
+    { name: '刘翼飞' },
+    { name: '戴梦瑶' },
+    { name: '张天祺' },
+    { name: '张雅捷' },
+    { name: '林弘扬' }
   ];
+
+
+  const StaticImageByName = ({ name }: { name: string }) => {
+    switch (name) {
+       case '笛韵扬':
+        return <StaticImage src="../images/dyy.png" alt="笛韵扬" width={65} height={65} layout="fixed" placeholder="none" />;
+      case '周子涵':
+        return <StaticImage src="../images/zzh.png" alt="周子涵" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '齐一舟':
+        return <StaticImage src="../images/qyz.jpg" alt="齐一舟" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '钟奕珈':
+        return <StaticImage src="../images/zyj.png" alt="钟奕珈" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '钟阅旸':
+        return <StaticImage src="../images/zyy.png" alt="钟阅旸" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '陈怡冰':
+        return <StaticImage src="../images/cyb.png" alt="陈怡冰" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '汤恭恪':
+        return <StaticImage src="../images/tgk.png" alt="汤恭恪" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '王子琪':
+        return <StaticImage src="../images/wzq.png" alt="王子琪" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '刘禹彤':
+        return <StaticImage src="../images/lyt.png" alt="刘禹彤" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '吴瑜青':
+        return <StaticImage src="../images/wyq.jpg" alt="吴瑜青" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '刘翼飞':
+        return <StaticImage src="../images/lyf.png" alt="刘翼飞" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '戴梦瑶':
+        return <StaticImage src="../images/dmy.png" alt="戴梦瑶" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '张天祺':
+        return <StaticImage src="../images/ztq.png" alt="张天祺" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '张雅捷':
+        return <StaticImage src="../images/zyj2.png" alt="张雅捷" width={65} height={65} layout="fixed" placeholder="none"/>;
+      case '林弘扬':
+        return <StaticImage src="../images/lhy.png" alt="林弘扬" width={65} height={65} layout="fixed" placeholder="none"/>;
+      default:
+        return <></>;
+    }
+  };
 
   return (
     <Layout>
@@ -111,13 +149,8 @@ const IndexPage: FC<PageProps> = () => {
                   key={index} 
                   name={member1.name} 
                   avatar={member1.avatar} 
-                  imageSrc={
-                    member1.imageSrc ? (
-                      <StaticImage src={member1.imageSrc} alt={member1.name} />
-                    ) : (
-                      <></>
-                    )
-                  } />
+                  imageSrc={<StaticImageByName name={member1.name} /> }
+                  />
                 ))}
               </div>
               <div className="members-list">
@@ -126,13 +159,8 @@ const IndexPage: FC<PageProps> = () => {
                   key={index} 
                   name={member2.name} 
                   avatar={member2.avatar} 
-                  imageSrc={
-                    member2.imageSrc ? (
-                      <StaticImage src={member2.imageSrc} alt={member2.name} />
-                    ) : (
-                      <></>
-                    )
-                  } />
+                  imageSrc={<StaticImageByName name={member2.name} /> }
+                  />
                 ))}
                 </div>
         </section>
