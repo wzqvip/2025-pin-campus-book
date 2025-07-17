@@ -3,7 +3,8 @@ import React, { FC } from 'react';
 interface MemberItemProps {
   name: string;
   avatar?: string;
-  imageSrc?: string;
+  imageSrc: JSX.Element;
+
 }
 
 const MemberItem: FC<MemberItemProps> = ({ name, avatar, imageSrc }) => {
@@ -14,14 +15,12 @@ const MemberItem: FC<MemberItemProps> = ({ name, avatar, imageSrc }) => {
     <div className="member-item">
       <div className="member-avatar placeholder placeholder-circle">
         {imageSource ? (
-          <img src={imageSource} alt={name} />
+           imageSrc
         ) : (
-          <div className="avatar-placeholder">
-            <div className="avatar-icon triangle"></div>
-            <div className="avatar-icon star"></div>
-            <div className="avatar-icon square"></div>
-          </div>
-        )}
+          <div className="image-placeholder">
+          <div className="placeholder-icon"></div>
+        </div>
+       )}
       </div>
       <p className="member-name text-sm text-center">{name}</p>
     </div>

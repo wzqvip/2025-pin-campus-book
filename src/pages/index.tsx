@@ -45,7 +45,7 @@ const IndexPage: FC<PageProps> = () => {
   ];
 
   const members1: Member1[] = [
-    { name: '笛韵扬', imageSrc: '' }, // 在这里填入图片路径
+    { name: '笛韵扬', imageSrc: '../images/dyy.png' }, // 在这里填入图片路径
     { name: '周子涵', imageSrc: '' }, // 在这里填入图片路径
     { name: '齐一舟', imageSrc: '' }, // 在这里填入图片路径
     { name: '钟奕珈', imageSrc: '' }, // 在这里填入图片路径
@@ -107,12 +107,32 @@ const IndexPage: FC<PageProps> = () => {
           <SectionHeader title="项目成员" showArrow={true} />
               <div className="members-list">
                 {members1.map((member1, index) => (
-                  <MemberItem key={index} name={member1.name} avatar={member1.avatar} imageSrc={member1.imageSrc} />
+                  <MemberItem 
+                  key={index} 
+                  name={member1.name} 
+                  avatar={member1.avatar} 
+                  imageSrc={
+                    member1.imageSrc ? (
+                      <StaticImage src={member1.imageSrc} alt={member1.name} />
+                    ) : (
+                      <></>
+                    )
+                  } />
                 ))}
               </div>
               <div className="members-list">
                 {members2.map((member2, index) => (
-                  <MemberItem key={index} name={member2.name} avatar={member2.avatar} imageSrc={member2.imageSrc} />
+                  <MemberItem 
+                  key={index} 
+                  name={member2.name} 
+                  avatar={member2.avatar} 
+                  imageSrc={
+                    member2.imageSrc ? (
+                      <StaticImage src={member2.imageSrc} alt={member2.name} />
+                    ) : (
+                      <></>
+                    )
+                  } />
                 ))}
                 </div>
         </section>

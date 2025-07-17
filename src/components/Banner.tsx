@@ -21,32 +21,6 @@ interface CarouselImage {
 const Banner: FC = () => {
   // 定义轮播图片数据数组（使用占位图片）
   const carouselImages: CarouselImage[] = [
-    // {
-    //   id: 1,
-    //   src: withPrefix("/images/banner-image1.jpg"),
-    //   alt: 'Banner Image 1'
-    // },
-    // {
-    //   id: 2,
-    //   src: withPrefix("/images/banner-image2.jpg"),
-    //   alt: 'Banner Image 2'
-    // },
-    // {
-    //   id: 3,
-    //   src: withPrefix("/images/banner-image3.jpg"),
-    //   alt: 'Banner Image 3'
-    // },
-    // {
-    //   id: 4,
-    //   src: withPrefix("/images/banner-image4.jpg"),
-    //   alt: 'Banner Image 4'
-    // },
-    // {
-    //   id: 5,
-    //   src: withPrefix("/images/banner-image5.jpg"),
-    //   alt: 'Banner Image 5'
-    // }
-
     {
       id: 1,
       component: (
