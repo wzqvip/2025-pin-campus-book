@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "description": "2025-pin-campus-book",
+  "homepage": "https://forephysics.github.io/2025-pin-campus-book",
   "keywords": [
     "gatsby",
     "react",
@@ -17,7 +18,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
     "gatsby": "^5.14.1",
@@ -27,6 +29,7 @@
     "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-source-filesystem": "^5.12.0",
     "gatsby-transformer-sharp": "^5.14.0",
+    "gh-pages": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.89.2"
