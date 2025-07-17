@@ -12,13 +12,6 @@ import TutorialItem from '../components/TutorialItem'; // 教程列表项组件
 import ProcessItem from '../components/ProcessItem'; // 制作过程列表项组件
 import MemberItem from '../components/MemberItem'; // 项目成员列表项组件
 
-import ProcessImage1 from '../images/process-image1.jpg';
-import ProcessImage2 from '../images/process-image2.jpg';
-import ProcessImage3 from '../images/process-image3.jpg';
-import ProcessImage4 from '../images/process-image4.jpg';
-import ProcessImage5 from '../images/process-image5.jpg';
-import ProcessImage6 from '../images/process-image6.jpg';
-
 interface Tutorial {
   title: string;
   description: string;
@@ -99,23 +92,13 @@ const IndexPage: FC<PageProps> = () => {
         <section className="process-section mb-2xl">
           <SectionHeader title="制作过程" showArrow={true} />
           <div className="process-grid grid grid-3">
-            {/* <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
-             <ProcessItem imageSrc = {withPrefix(ProcessImage2)}  />
-            <ProcessItem imageSrc = {withPrefix(ProcessImage3)}  /> 
-            <ProcessItem imageSrc = {withPrefix(ProcessImage4)}  /> 
-            <ProcessItem imageSrc = {withPrefix(ProcessImage5)}  /> 
-            <ProcessItem imageSrc = {withPrefix(ProcessImage6)}  />  
-            <ProcessItem imageSrc = '../images/process-image1.jpg' />
-            <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
-            <ProcessItem imageSrc = '../images/process-image1.jpg'/> 
-            <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
-            <ProcessItem imageSrc = '../images/process-image1.jpg' />  */}
-            <ProcessItem imageSrc={withPrefix("/images/process-image1.jpg")} /> 
-            <ProcessItem imageSrc={withPrefix("/images/process-image2.jpg")} />
-            <ProcessItem imageSrc={withPrefix("/images/process-image3.jpg")} /> 
-            <ProcessItem imageSrc={withPrefix("/images/process-image4.jpg")} /> 
-            <ProcessItem imageSrc={withPrefix("/images/process-image5.jpg")} /> 
-            <ProcessItem imageSrc={withPrefix("/images/process-image6.jpg")} />
+          <ProcessItem imageSrc={<StaticImage src="../images/process-image1.jpg" alt="process-image1" />} />
+          <ProcessItem imageSrc={<StaticImage src="../images/process-image2.jpg" alt="process-image2" />} />
+          <ProcessItem imageSrc={<StaticImage src="../images/process-image3.jpg" alt="process-image3" />} />
+          <ProcessItem imageSrc={<StaticImage src="../images/process-image4.jpg" alt="process-image4" />} />
+          <ProcessItem imageSrc={<StaticImage src="../images/process-image5.jpg" alt="process-image5" />} />
+          <ProcessItem imageSrc={<StaticImage src="../images/process-image6.jpg" alt="process-image6" />} />
+
           </div>
         </section>
 

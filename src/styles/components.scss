@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   box-shadow: $shadow-lg;
-  height: 600px;
+  height: 650px;
 
   @include mobile {
     height: 300px; // 移动设备上调整高度

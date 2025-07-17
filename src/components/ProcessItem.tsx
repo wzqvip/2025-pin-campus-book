@@ -1,23 +1,17 @@
 import React, { FC } from 'react';
 
 interface ProcessItemProps {
-  hasOverlay?: boolean;
-  overlayText?: string;
-  imageSrc?: string;
+    imageSrc: JSX.Element;
 }
 
-const ProcessItem: FC<ProcessItemProps> = ({ hasOverlay = false, overlayText = '', imageSrc }) => {
+const ProcessItem: FC<ProcessItemProps> = ({ imageSrc }) => {
   return (
     <div className="process-item card">
       <div className="process-content">
         <div className="process-images">
           <div className="banner-image">
             {imageSrc ? (
-              <img 
-                src={imageSrc} 
-                alt="制作过程"
-                loading="lazy" // 懒加载优化
-              />
+               imageSrc
             ) : (
               <div className="image-placeholder">
                 <div className="placeholder-icon"></div>
@@ -25,11 +19,6 @@ const ProcessItem: FC<ProcessItemProps> = ({ hasOverlay = false, overlayText = '
             )}
           </div>
         </div>
-        {hasOverlay && (
-          <div className="process-overlay">
-            <span className="overlay-text">{overlayText}</span>
-          </div>
-        )}
       </div>
     </div>
   );
