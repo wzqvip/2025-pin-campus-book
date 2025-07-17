@@ -1,5 +1,6 @@
 // 导入 React 库和必要的 hooks
 import React, { FC, useState, useEffect } from 'react';
+import { withPrefix } from "gatsby";
 
 import Image1 from '../images/banner-image1.jpg';
 import Image2 from '../images/banner-image2.jpg';
@@ -20,27 +21,27 @@ const Banner: FC = () => {
   const carouselImages: CarouselImage[] = [
     {
       id: 1,
-      src: Image1,
+      src: withPrefix(Image1),
       alt: 'Banner Image 1'
     },
     {
       id: 2,
-      src: Image2,
+      src: withPrefix(Image2),
       alt: 'Banner Image 2'
     },
     {
       id: 3,
-      src: Image3,
+      src: withPrefix(Image3),
       alt: 'Banner Image 3'
     },
     {
       id: 4,
-      src: Image4,
+      src: withPrefix(Image4),
       alt: 'Banner Image 4'
     },
     {
       id: 5,
-      src: Image5,
+      src: withPrefix(Image5),
       alt: 'Banner Image 5'
     }
   ];

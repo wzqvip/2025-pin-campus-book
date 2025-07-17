@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import { HeadFC, PageProps } from 'gatsby';
+import { withPrefix } from "gatsby";
+
 // 导入自定义组件
 import Layout from '../components/Layout'; // 页面整体布局组件
 import Banner from '../components/Banner'; // 顶部横幅组件
@@ -95,12 +97,12 @@ const IndexPage: FC<PageProps> = () => {
         <section className="process-section mb-2xl">
           <SectionHeader title="制作过程" showArrow={true} />
           <div className="process-grid grid grid-3">
-            <ProcessItem imageSrc = {ProcessImage1} /> {/* 在这里填入图片路径 */}
-            <ProcessItem imageSrc = {ProcessImage2}  /> {/* 在这里填入图片路径 */}
-            <ProcessItem imageSrc = {ProcessImage3}  /> {/* 在这里填入图片路径 */}
-            <ProcessItem imageSrc = {ProcessImage4}  /> {/* 在这里填入图片路径 */}
-            <ProcessItem imageSrc = {ProcessImage5}  /> {/* 在这里填入图片路径 */}
-            <ProcessItem imageSrc = {ProcessImage6}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage1)} /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage2)}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage3)}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage4)}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage5)}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage6)}  /> {/* 在这里填入图片路径 */}
           </div>
         </section>
 

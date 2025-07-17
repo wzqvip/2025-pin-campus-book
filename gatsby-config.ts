@@ -17,6 +17,7 @@ const config: GatsbyConfig = {
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  pathPrefix: "/2025-pin-campus-book",
   siteMetadata: {
     title: `Pin Campus Book`,
     description: `上科大2025届新生纪念可交互礼物`,
