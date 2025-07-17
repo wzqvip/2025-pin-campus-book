@@ -1,49 +1,107 @@
 // 导入 React 库和必要的 hooks
 import React, { FC, useState, useEffect } from 'react';
 import { withPrefix } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image"
 
-import Image1 from '../images/banner-image1.jpg';
-import Image2 from '../images/banner-image2.jpg';
-import Image3 from '../images/banner-image3.jpg';
-import Image4 from '../images/banner-image4.jpg';
-import Image5 from '../images/banner-image5.jpg';
+// import Image1 from '../images/banner-image1.jpg';
+// import Image2 from '../images/banner-image2.jpg';
+// import Image3 from '../images/banner-image3.jpg';
+// import Image4 from '../images/banner-image4.jpg';
+// import Image5 from '../images/banner-image5.jpg';
 
 // 定义轮播图片数据接口
 interface CarouselImage {
   id: number;
-  src: string;
-  alt: string;
+  //src: string;
+  //alt: string;
+  component: JSX.Element;  
 }
 
 // 定义 Banner 函数组件
 const Banner: FC = () => {
   // 定义轮播图片数据数组（使用占位图片）
   const carouselImages: CarouselImage[] = [
+    // {
+    //   id: 1,
+    //   src: withPrefix("/images/banner-image1.jpg"),
+    //   alt: 'Banner Image 1'
+    // },
+    // {
+    //   id: 2,
+    //   src: withPrefix("/images/banner-image2.jpg"),
+    //   alt: 'Banner Image 2'
+    // },
+    // {
+    //   id: 3,
+    //   src: withPrefix("/images/banner-image3.jpg"),
+    //   alt: 'Banner Image 3'
+    // },
+    // {
+    //   id: 4,
+    //   src: withPrefix("/images/banner-image4.jpg"),
+    //   alt: 'Banner Image 4'
+    // },
+    // {
+    //   id: 5,
+    //   src: withPrefix("/images/banner-image5.jpg"),
+    //   alt: 'Banner Image 5'
+    // }
+
     {
       id: 1,
-      src: withPrefix("/images/banner-image1.jpg"),
-      alt: 'Banner Image 1'
+      component: (
+        <StaticImage
+          src="../images/banner-image1.jpg"
+          alt="Banner Image 1"
+          loading="lazy"
+          placeholder="blurred"
+        />
+      ),
     },
     {
       id: 2,
-      src: withPrefix("/images/banner-image2.jpg"),
-      alt: 'Banner Image 2'
+      component: (
+        <StaticImage
+          src="../images/banner-image2.jpg"
+          alt="Banner Image 2"
+          loading="lazy"
+          placeholder="blurred"
+        />
+      ),
     },
     {
       id: 3,
-      src: withPrefix("/images/banner-image3.jpg"),
-      alt: 'Banner Image 3'
+      component: (
+        <StaticImage
+          src="../images/banner-image3.jpg"
+          alt="Banner Image 3"
+          loading="lazy"
+          placeholder="blurred"
+        />
+      ),
     },
     {
       id: 4,
-      src: withPrefix("/images/banner-image4.jpg"),
-      alt: 'Banner Image 4'
+      component: (
+        <StaticImage
+          src="../images/banner-image4.jpg"
+          alt="Banner Image 4"
+          loading="lazy"
+          placeholder="blurred"
+        />
+      ),
     },
     {
       id: 5,
-      src: withPrefix("/images/banner-image5.jpg"),
-      alt: 'Banner Image 5'
-    }
+      component: (
+        <StaticImage
+          src="../images/banner-image5.jpg"
+          alt="Banner Image 5"
+          loading="lazy"
+          placeholder="blurred"
+        />
+      ),
+    },
   ];
 
 
@@ -100,11 +158,7 @@ const Banner: FC = () => {
           {/* 遍历图片数组，渲染每张图片 */}
           {carouselImages.map((image) => (
             <div key={image.id} className="banner-image">
-              <img 
-                src={image.src} 
-                alt={image.alt}
-                loading="lazy" // 懒加载优化
-              />
+              {image.component}
             </div>
           ))}
         </div>
