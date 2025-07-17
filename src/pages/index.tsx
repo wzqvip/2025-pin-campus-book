@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { HeadFC, PageProps } from 'gatsby';
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image";
+import { withPrefix } from "gatsby";
+
 
 // 导入自定义组件
 import Layout from '../components/Layout'; // 页面整体布局组件
@@ -97,17 +99,23 @@ const IndexPage: FC<PageProps> = () => {
         <section className="process-section mb-2xl">
           <SectionHeader title="制作过程" showArrow={true} />
           <div className="process-grid grid grid-3">
-            <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
-            {/* <ProcessItem imageSrc = {withPrefix(ProcessImage2)}  />
+            {/* <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
+             <ProcessItem imageSrc = {withPrefix(ProcessImage2)}  />
             <ProcessItem imageSrc = {withPrefix(ProcessImage3)}  /> 
             <ProcessItem imageSrc = {withPrefix(ProcessImage4)}  /> 
             <ProcessItem imageSrc = {withPrefix(ProcessImage5)}  /> 
-            <ProcessItem imageSrc = {withPrefix(ProcessImage6)}  />  */}
+            <ProcessItem imageSrc = {withPrefix(ProcessImage6)}  />  
             <ProcessItem imageSrc = '../images/process-image1.jpg' />
             <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
             <ProcessItem imageSrc = '../images/process-image1.jpg'/> 
             <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
-            <ProcessItem imageSrc = '../images/process-image1.jpg' /> 
+            <ProcessItem imageSrc = '../images/process-image1.jpg' />  */}
+            <ProcessItem imageSrc={withPrefix("/images/process-image1.jpg")} /> 
+            <ProcessItem imageSrc={withPrefix("/images/process-image2.jpg")} />
+            <ProcessItem imageSrc={withPrefix("/images/process-image3.jpg")} /> 
+            <ProcessItem imageSrc={withPrefix("/images/process-image4.jpg")} /> 
+            <ProcessItem imageSrc={withPrefix("/images/process-image5.jpg")} /> 
+            <ProcessItem imageSrc={withPrefix("/images/process-image6.jpg")} />
           </div>
         </section>
 

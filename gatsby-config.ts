@@ -1,29 +1,14 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
-  siteMetadata: {
-    title: `2025 Pin Campus Book`,
-    siteUrl: `https://www.yourdomain.tld`
-  },
-  // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
-  // If you use VSCode you can also use the GraphQL plugin
-  // Learn more at: https://gatsby.dev/graphql-typegen
-  graphqlTypegen: true,
-  plugins: ["gatsby-plugin-sass"]
-};
-
-
-/**
- * @type {import('gatsby').GatsbyConfig}
- */
-module.exports = {
-  pathPrefix: "/2025-pin-campus-book",
+  pathPrefix: `/2025-pin-campus-book`,
   siteMetadata: {
     title: `Pin Campus Book`,
     description: `上科大2025届新生纪念可交互礼物`,
     author: `@pincampusbook`,
     siteUrl: `https://www.pincampusbook.com`,
   },
+  graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sass`,
@@ -50,7 +35,5 @@ module.exports = {
     },
   ],
 };
-
-
 
 export default config;

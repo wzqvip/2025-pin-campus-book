@@ -21,27 +21,27 @@ const Banner: FC = () => {
   const carouselImages: CarouselImage[] = [
     {
       id: 1,
-      src: withPrefix(Image1),
+      src: withPrefix("/images/banner-image1.jpg"),
       alt: 'Banner Image 1'
     },
     {
       id: 2,
-      src: withPrefix(Image2),
+      src: withPrefix("/images/banner-image2.jpg"),
       alt: 'Banner Image 2'
     },
     {
       id: 3,
-      src: withPrefix(Image3),
+      src: withPrefix("/images/banner-image3.jpg"),
       alt: 'Banner Image 3'
     },
     {
       id: 4,
-      src: withPrefix(Image4),
+      src: withPrefix("/images/banner-image4.jpg"),
       alt: 'Banner Image 4'
     },
     {
       id: 5,
-      src: withPrefix(Image5),
+      src: withPrefix("/images/banner-image5.jpg"),
       alt: 'Banner Image 5'
     }
   ];
