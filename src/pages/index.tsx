@@ -8,58 +8,64 @@ import TutorialItem from '../components/TutorialItem'; // 教程列表项组件
 import ProcessItem from '../components/ProcessItem'; // 制作过程列表项组件
 import MemberItem from '../components/MemberItem'; // 项目成员列表项组件
 
+import ProcessImage1 from '../images/process-image1.jpg';
+import ProcessImage2 from '../images/process-image2.jpg';
+import ProcessImage3 from '../images/process-image3.jpg';
+import ProcessImage4 from '../images/process-image4.jpg';
+import ProcessImage5 from '../images/process-image5.jpg';
+import ProcessImage6 from '../images/process-image6.jpg';
+
 interface Tutorial {
   title: string;
   description: string;
-  date: string;
-  duration: string;
+  linkTo?: string;
 }
 
 interface Member1 {
   name: string;
   avatar?: string;
+  imageSrc?: string;
 }
 
 interface Member2 {
   name: string;
   avatar?: string;
+  imageSrc?: string;
 }
 
 const IndexPage: FC<PageProps> = () => {
   const tutorials: Tutorial[] = [
     {
       title: '使用教程',
-      description: '如何从0开始上手XX',
-      date: '2025/07/14',
-      duration: '23 min'
+      description: '如何从0开始上手Pin Campus Book',
+      linkTo: '/tutorial'
     },
     {
-      title: '进阶教程',
-      description: '开始你的个性化代码之旅吧',
-      date: '2025/07/14',
-      duration: '23 min'
+      title: '注意事项',
+      description: '你在使用前必须知道的一些小事',
+      linkTo: '/precautions'
     }
   ];
 
   const members1: Member1[] = [
-    { name: '笛韵扬' },
-    { name: '周子涵' },
-    { name: '齐一舟' },
-    { name: '钟奕珈' },
-    { name: '钟阅旸' },
-    { name: '陈怡冰' },
-    { name: '汤恭恪' }
+    { name: '笛韵扬', imageSrc: '' }, // 在这里填入图片路径
+    { name: '周子涵', imageSrc: '' }, // 在这里填入图片路径
+    { name: '齐一舟', imageSrc: '' }, // 在这里填入图片路径
+    { name: '钟奕珈', imageSrc: '' }, // 在这里填入图片路径
+    { name: '钟阅旸', imageSrc: '' }, // 在这里填入图片路径
+    { name: '陈怡冰', imageSrc: '' }, // 在这里填入图片路径
+    { name: '汤恭恪', imageSrc: '' }  // 在这里填入图片路径
   ];
 
   const members2: Member2[] = [
-    { name: '王子琪' },
-    { name: '刘禹彤' },
-    { name: '吴瑜青' },
-    { name: '刘翼飞' },
-    { name: '戴梦瑶' },
-    { name: '张天祺' },
-    { name: '张雅捷' },
-    { name: '林弘扬' }
+    { name: '王子琪', imageSrc: '' }, // 在这里填入图片路径
+    { name: '刘禹彤', imageSrc: '' }, // 在这里填入图片路径
+    { name: '吴瑜青', imageSrc: '' }, // 在这里填入图片路径
+    { name: '刘翼飞', imageSrc: '' }, // 在这里填入图片路径
+    { name: '戴梦瑶', imageSrc: '' }, // 在这里填入图片路径
+    { name: '张天祺', imageSrc: '' }, // 在这里填入图片路径
+    { name: '张雅捷', imageSrc: '' }, // 在这里填入图片路径
+    { name: '林弘扬', imageSrc: '' }  // 在这里填入图片路径
   ];
 
   return (
@@ -79,8 +85,7 @@ const IndexPage: FC<PageProps> = () => {
                 key={index}
                 title={tutorial.title}
                 description={tutorial.description}
-                date={tutorial.date}
-                duration={tutorial.duration}
+                linkTo={tutorial.linkTo}
               />
             ))}
           </div>
@@ -90,12 +95,12 @@ const IndexPage: FC<PageProps> = () => {
         <section className="process-section mb-2xl">
           <SectionHeader title="制作过程" showArrow={true} />
           <div className="process-grid grid grid-3">
-            <ProcessItem hasOverlay={true} overlayText="J" />
-            <ProcessItem />
-            <ProcessItem />
-            <ProcessItem />
-            <ProcessItem />
-            <ProcessItem />
+            <ProcessItem imageSrc = {ProcessImage1} /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {ProcessImage2}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {ProcessImage3}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {ProcessImage4}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {ProcessImage5}  /> {/* 在这里填入图片路径 */}
+            <ProcessItem imageSrc = {ProcessImage6}  /> {/* 在这里填入图片路径 */}
           </div>
         </section>
 
@@ -104,12 +109,12 @@ const IndexPage: FC<PageProps> = () => {
           <SectionHeader title="项目成员" showArrow={true} />
               <div className="members-list">
                 {members1.map((member1, index) => (
-                  <MemberItem key={index} name={member1.name} avatar={member1.avatar} />
+                  <MemberItem key={index} name={member1.name} avatar={member1.avatar} imageSrc={member1.imageSrc} />
                 ))}
               </div>
               <div className="members-list">
                 {members2.map((member2, index) => (
-                  <MemberItem key={index} name={member2.name} avatar={member2.avatar} />
+                  <MemberItem key={index} name={member2.name} avatar={member2.avatar} imageSrc={member2.imageSrc} />
                 ))}
                 </div>
         </section>

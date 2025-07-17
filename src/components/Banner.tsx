@@ -58,7 +58,7 @@ const Banner: FC = () => {
         // 如果是最后一张图片，则回到第一张；否则切换到下一张
         prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // 3秒间隔
+    }, 5000); // 3秒间隔
 
     // 清理函数：组件卸载时清除定时器
     return () => clearInterval(interval);

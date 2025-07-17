@@ -3,14 +3,18 @@ import React, { FC } from 'react';
 interface MemberItemProps {
   name: string;
   avatar?: string;
+  imageSrc?: string;
 }
 
-const MemberItem: FC<MemberItemProps> = ({ name, avatar }) => {
+const MemberItem: FC<MemberItemProps> = ({ name, avatar, imageSrc }) => {
+  // 优先使用 imageSrc，如果没有则使用 avatar
+  const imageSource = imageSrc || avatar;
+  
   return (
     <div className="member-item">
       <div className="member-avatar placeholder placeholder-circle">
-        {avatar ? (
-          <img src={avatar} alt={name} />
+        {imageSource ? (
+          <img src={imageSource} alt={name} />
         ) : (
           <div className="avatar-placeholder">
             <div className="avatar-icon triangle"></div>

@@ -338,8 +338,8 @@
 }
 
 .process-item {
-  aspect-ratio: 1;
-  padding: $spacing-lg;
+ // aspect-ratio: 1;
+  //padding: $spacing-lg;
   background-color: $color-background-light;
   border: 1px solid $color-border;
   position: relative;
@@ -478,4 +478,228 @@
 .member-name {
   font-weight: $font-weight-medium;
   white-space: nowrap;
+}
+
+// Tutorial and Precautions Page Styles
+.tutorial-header,
+.precautions-header {
+  padding: $spacing-lg 0;
+  border-bottom: 1px solid $color-border;
+}
+
+.tutorial-nav,
+.precautions-nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: $border-radius-md;
+  background: $color-background-light;
+  border: 1px solid $color-border;
+  color: $color-text;
+  text-decoration: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: $color-background;
+    transform: translateX(-2px);
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.tutorial-page-title,
+.precautions-page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $color-text;
+  margin: 0;
+}
+
+// Tutorial Steps and Precaution Items
+.tutorial-steps,
+.precautions-items {
+  padding: $spacing-xl 0;
+}
+
+.tutorial-step,
+.precaution-item {
+  margin-bottom: $spacing-2xl;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.step-content,
+.item-content {
+  display: flex;
+  gap: $spacing-xl;
+  align-items: flex-start;
+
+  @include mobile {
+    flex-direction: column;
+    gap: $spacing-lg;
+  }
+}
+
+.step-text,
+.item-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-title,
+.item-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-text;
+  margin: 0 0 $spacing-md 0;
+  line-height: 1.4;
+}
+
+.step-description,
+.item-description {
+  font-size: 1rem;
+  color: $color-text-light;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.step-image,
+.item-image {
+  flex: 0 0 300px;
+  height: 200px;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  background: $color-background-light;
+  border: 1px solid $color-border;
+
+  @include mobile {
+    flex: none;
+    width: 100%;
+    height: 180px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-sm;
+    background: $color-background-light;
+
+    .placeholder-icon {
+      width: 24px;
+      height: 24px;
+      background: $color-border;
+      opacity: 0.5;
+
+      &.triangle {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      }
+
+      &.star {
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      }
+
+      &.square {
+        border-radius: $border-radius-sm;
+      }
+    }
+  }
+}
+
+.step-divider,
+.item-divider {
+  height: 1px;
+  background: $color-border;
+  margin: $spacing-xl 0;
+  opacity: 0.5;
+}
+
+// Responsive adjustments
+@include mobile {
+  .tutorial-header,
+  .precautions-header {
+    padding: $spacing-md 0;
+  }
+
+  .tutorial-page-title,
+  .precautions-page-title {
+    font-size: 1.25rem;
+  }
+
+  .step-title,
+  .item-title {
+    font-size: 1.125rem;
+  }
+
+  .step-description,
+  .item-description {
+    font-size: 0.9rem;
+  }
+}
+
+
+// Tutorial Item Link Styles
+.tutorial-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    
+    .tutorial-item {
+      box-shadow: $shadow-lg;
+    }
+    
+    .arrow-icon {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: $color-background-light;
+  border: 1px solid $color-border;
+  color: $color-text-light;
+  transition: all 0.2s ease;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Update tutorial play section
+.tutorial-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
