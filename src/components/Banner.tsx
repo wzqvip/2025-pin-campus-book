@@ -167,7 +167,7 @@ const Banner: FC = () => {
       <div className="banner-content">
         <div className="banner-text">
           <h1 className="banner-title">Pin Campus Book</h1>
-          <p className="banner-subtitle">上科大2025届新生纪念可交互礼物</p>
+          <p className="banner-subtitle">上科大2025级新生纪念可交互礼物</p>
         </div>
       </div>
     </div>

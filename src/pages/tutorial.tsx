@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 import { HeadFC, PageProps, Link } from 'gatsby';
 import Layout from '../components/Layout';
+import { StaticImage } from "gatsby-plugin-image";
+
 
 interface TutorialStep {
   id: number;
@@ -12,28 +14,34 @@ interface TutorialStep {
 const TutorialPage: FC<PageProps> = () => {
   const tutorialSteps: TutorialStep[] = [
     {
+      id: 0,
+      title: 'Step 0 / 加入群聊',
+      description: '完整的使用教程尚未完工，可查看“上科大招生”微信公众号的推文，视频中速览了使用流程。也可以直接加入InterStduio的QQ群815750302。',
+      imageSrc: require('../images/inter-logo.png').default
+    },
+    {
       id: 1,
       title: 'Step 1 / 初始光效',
-      description: '从小插子中取下游戏板，将它口朝上插入主控模块，就可以进入初始光效，灯光会亮个不停十六伴数闪烁。',
-      imageSrc: '' // 在这里填入图片路径
+      description: '从小册子中取下游戏板，将C口供电接入主控模块，就可以进入初始光效，灯光会逐个点亮十六栋校园建筑。',
+      imageSrc: require('../images/tu1.png').default
     },
     {
       id: 2,
       title: 'Step 2 / 开始游戏',
-      description: '按列按动游戏板，伴随着一次震动提示，亮光将对应你的对开始闪烁。',
-      imageSrc: '' // 在这里填入图片路径
+      description: '猛烈甩动游戏板，伴随着一次震动提示，景观塔对应的灯开始闪烁，',
+      imageSrc: require('../images/tu2.png').default
     },
     {
       id: 3,
       title: 'Step 3 / 插入模型',
-      description: '从线路板上小心地取下"模型"，根据说明书和你的感觉的提示，将它插入对应的插口内。',
-      imageSrc: '' // 在这里填入图片路径
+      description: '从建筑板上小心地抠下模型，根据说明书和硫酸纸的提示，将凸起插入对应的槽口内。',
+      imageSrc: require('../images/tu3.png').default
     },
     {
       id: 4,
-      title: 'Step 4 / 拆下各个模块',
-      description: '10s后，我到首页的触控模块，点击中间的圆圈区域，伴随着一次震动提示，回到主页，下一个常亮插入的连接区域已经亮起。',
-      imageSrc: '' // 在这里填入图片路径
+      title: 'Step 4 / 触摸切换',
+      description: '接着，找到背面的触摸模块，点击中间的圆圈区域。伴随着一次震动提示，回到正面，下一个需要插入的建筑区域已经亮起。',
+      imageSrc: require('../images/tu4.png').default
     }
   ];
 

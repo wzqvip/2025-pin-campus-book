@@ -34,12 +34,12 @@ const IndexPage: FC<PageProps> = () => {
   const tutorials: Tutorial[] = [
     {
       title: '使用教程',
-      description: '如何从0开始上手Pin Campus Book',
+      description: '如何从零上手 Pin Campus Book',
       linkTo: '/tutorial'
     },
     {
       title: '注意事项',
-      description: '你在使用前必须知道的一些小事',
+      description: '使用前必须知道的一些小事',
       linkTo: '/precautions'
     }
   ];

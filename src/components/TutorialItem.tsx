@@ -18,7 +18,6 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
             alt="使用教程"
             width={300}
             height={150}
-
             layout="fixed"
             placeholder="none"
           />
@@ -34,6 +33,9 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
             placeholder="none"
           />
         );
+      // 默认情况（可选）
+      default:
+        return null; // 或返回一个默认图片
     }
   };
 
@@ -44,7 +46,7 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
           {renderImage()}
         </div>
         <div className="tutorial-info">
-          <h2 className="tutorial-title">{title}</h2>
+          <p className="tutorial-title">{title}</p>
           <p className="tutorial-description text-light">{description}</p>
           <div className="tutorial-meta text-sm text-light">
             {/* 可加时间或作者等 */}
@@ -63,6 +65,7 @@ const TutorialItem: FC<TutorialItemProps> = ({ title, description, linkTo }) => 
     </div>
   );
 
+  // 如果有链接，用 Gatsby 的 Link 包裹
   if (linkTo) {
     return <Link to={linkTo} className="tutorial-item-link">{content}</Link>;
   }

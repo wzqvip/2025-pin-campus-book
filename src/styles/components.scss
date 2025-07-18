@@ -280,15 +280,25 @@
   flex: 1;
 }
 
+.tutorial-item {
+  padding: 0rem;
+  border-radius: 0.5rem;
+  background: white;
+  // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .tutorial-title {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-semibold;
-  margin-bottom: $spacing-xs;
+  font-size: 1.6rem;  /* 大标题 */
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+  color: #333;      /* 深色标题 */
 }
 
 .tutorial-description {
-  font-size: $font-size-base;
-  margin-bottom: $spacing-sm;
+  font-size: 1rem;
+  color: #666;      /* 中灰色 */
+  margin: 0 0 0.8rem 0;
+  line-height: 1.5;
 }
 
 .tutorial-meta {
