@@ -6,7 +6,7 @@ const config: GatsbyConfig = {
     title: `Pin Campus Book`,
     description: `上科大2025届新生纪念可交互礼物`,
     author: `@pincampusbook`,
-    siteUrl: `https://www.pincampusbook.com`,
+    siteUrl: `https://www.interstudio.tech`,
   },
   graphqlTypegen: true,
   plugins: [
