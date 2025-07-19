@@ -44,11 +44,11 @@ const getMemberImage = (name: string): string => {
 };
 
 const IndexPage: FC<PageProps> = () => {
-  useEffect(() => {
-    if (location.hostname === 'www.interstudio.tech' && !location.pathname.startsWith('/2025-pin-campus-book')) {
-      location.href = '/2025-pin-campus-book/';
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (location.hostname === 'www.interstudio.tech' && !location.pathname.startsWith('/2025-pin-campus-book')) {
+  //     location.href = '/2025-pin-campus-book/';
+  //   }
+  // }, []);
 
   return (
     <Layout>
