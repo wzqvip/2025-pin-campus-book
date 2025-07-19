@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { HeadFC, PageProps } from 'gatsby';
 import { StaticImage } from "gatsby-plugin-image";
 import { withPrefix } from "gatsby";
@@ -12,12 +12,16 @@ import TutorialItem from '../components/TutorialItem'; // 教程列表项组件
 import ProcessItem from '../components/ProcessItem'; // 制作过程列表项组件
 import MemberItem from '../components/MemberItem'; // 项目成员列表项组件
 
-<script>
-  if (location.hostname === 'www.interstudio.tech' && !location.pathname.startsWith('/2025-pin-campus-book')) {
-    location.href = '/2025-pin-campus-book/';
-  }
-</script>
-
+const IndexPage: FC<PageProps> = () => {
+  // ✅ 页面首次加载执行跳转
+  useEffect(() => {
+    if (
+      location.hostname === 'www.interstudio.tech' &&
+      !location.pathname.startsWith('/2025-pin-campus-book')
+    ) {
+      location.href = '/2025-pin-campus-book/';
+    }
+  }, []);
 
 interface Tutorial {
   title: string;
